@@ -1,0 +1,9 @@
+# 📈 Summary of Statistical Analysis on Hospital Readmission Data
+
+This Jupyter notebook conducts a statistical comparison of patient attributes with respect to hospital readmission status. Using a cleaned medical dataset (`medical_clean.csv`), the primary goal is to determine whether there are significant differences in certain variables—such as `Age`, `Soft_drink` consumption, and `Initial_days`—between patients who were readmitted to the hospital and those who were not. The analysis begins by splitting the data into two groups based on the `ReAdmis` variable: 'Yes' (readmitted) and 'No' (not readmitted).
+
+To compare these groups, the Welch’s t-test is applied, a variation of the two-sample t-test that does not assume equal population variance. This test evaluates the statistical significance of differences in the means for selected variables. For each variable, the notebook calculates the t-statistic, p-value, and degrees of freedom. A p-value threshold of 0.05 is used to determine whether the null hypothesis (no difference in means) can be rejected.
+
+In addition to statistical testing, the notebook visualizes the distributions using seaborn histograms. These plots allow for an intuitive understanding of how each variable differs between readmitted and non-readmitted groups. The visualizations support the numerical conclusions drawn from the t-tests and help reinforce the significance—or lack thereof—of the findings.
+
+Overall, the notebook demonstrates a structured and replicable method for conducting hypothesis testing on healthcare data. The combination of statistical rigor and visual aids makes this analysis an effective approach for exploring factors associated with hospital readmission, potentially guiding policy changes or personalized interventions in healthcare settings.
